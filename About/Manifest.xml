@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>ForcedOrder</identifier>
+  <version>1.4.0</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/ForcedOrder/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/ForcedOrder/releases</downloadUri>
+</Manifest>
