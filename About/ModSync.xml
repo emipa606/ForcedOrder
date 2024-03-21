@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>ef01bd3e-0193-4374-ae91-456d9c946a54</ID>
   <ModName>Forced Order (Continued)</ModName>
-  <Version>1.4.0</Version>
+  <Version>1.5.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,7 +12,3 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
-
-
-
-

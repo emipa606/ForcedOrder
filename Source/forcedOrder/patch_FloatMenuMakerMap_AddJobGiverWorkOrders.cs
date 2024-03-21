@@ -73,7 +73,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                             if (JobFailReason.HaveReason)
                             {
                                 label = $"{(JobFailReason.CustomJobString.NullOrEmpty()
-                                    ? "CannotGenericWork".Translate((NamedArgument)worker.def.verb,
+                                    ? (string)"CannotGenericWork".Translate((NamedArgument)worker.def.verb,
                                         (NamedArgument)t.LabelShort, (NamedArgument)t)
                                     : (string)"CannotGenericWorkCustom".Translate(
                                         (NamedArgument)JobFailReason.CustomJobString))}: {JobFailReason.Reason.CapitalizeFirst()}";
@@ -91,7 +91,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                                 label = "CannotPrioritizeWorkGiverDisabled".Translate(
                                     (NamedArgument)worker.def.label);
                             }
-                            else if (pawn.jobs.curJob != null && pawn.jobs.curJob.JobIsSameAs(job))
+                            else if (pawn.jobs.curJob != null && pawn.jobs.curJob.JobIsSameAs(pawn, job))
                             {
                                 label = "CannotGenericAlreadyAm".Translate(
                                     (NamedArgument)worker.PostProcessedGerund(job), (NamedArgument)t.LabelShort,
@@ -262,7 +262,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                             label = clickCell.InAllowedArea(pawn)
                                 ? "CannotPrioritizeCellForbidden".Translate()
                                 : (string)("CannotPrioritizeForbiddenOutsideAllowedArea".Translate() + ": " +
-                                           pawn.playerSettings.EffectiveAreaRestriction.Label);
+                                           pawn.playerSettings.EffectiveAreaRestrictionInPawnCurrentMap.Label);
                         }
 
                         else
@@ -273,7 +273,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                     else
                     {
                         var workType = worker.def.workType;
-                        if (pawn.jobs.curJob != null && pawn.jobs.curJob.JobIsSameAs(job))
+                        if (pawn.jobs.curJob != null && pawn.jobs.curJob.JobIsSameAs(pawn, job))
                         {
                             label = "CannotGenericAlreadyAmCustom".Translate(
                                 (NamedArgument)worker.PostProcessedGerund(job));
@@ -295,7 +295,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                             label = clickCell.InAllowedArea(pawn)
                                 ? "CannotPrioritizeCellForbidden".Translate()
                                 : (string)("CannotPrioritizeForbiddenOutsideAllowedArea".Translate() + ": " +
-                                           pawn.playerSettings.EffectiveAreaRestriction.Label);
+                                           pawn.playerSettings.EffectiveAreaRestrictionInPawnCurrentMap.Label);
                         }
 
                         else if (!pawn.CanReach(clickCell, PathEndMode.Touch, Danger.Deadly))
@@ -328,7 +328,7 @@ internal class patch_FloatMenuMakerMap_AddJobGiverWorkOrders
                 }
 
                 var label1 = label;
-                if (opts.Any(op => op.Label == label1.TrimEnd(Array.Empty<char>())))
+                if (opts.Any(op => op.Label == label1.TrimEnd([])))
                 {
                     continue;
                 }
