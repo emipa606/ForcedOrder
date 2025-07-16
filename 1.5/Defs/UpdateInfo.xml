@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TabulaRasa.UpdateDef Abstract="true" Name="ForcedOrder_UpdateInfoBase">
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2988065743</linkUrl>
+		<banner>UpdateInfo/ForcedOrder</banner>
+	</TabulaRasa.UpdateDef>
+	<TabulaRasa.UpdateDef ParentName="ForcedOrder_UpdateInfoBase" MayRequire="neronix17.toolbox">
+		<defName>ForcedOrder_1_5_0</defName>
+		<date>2025/7/16</date>
+		<content>This mod will not be further updated, please use Achtung! by Brrainz instead.</content>
+	</TabulaRasa.UpdateDef>
+</Defs>
+

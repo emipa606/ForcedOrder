@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="ForcedOrder_UpdateFeatureBase">
+		<modNameReadable>ForcedOrder</modNameReadable>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2988065743</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="ForcedOrder_UpdateFeatureBase">
+		<defName>ForcedOrder_1_5_0</defName>
+		<assemblyVersion>1.5.0</assemblyVersion>
+		<content>This mod will not be further updated, please use Achtung! by Brrainz instead.</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
+
